@@ -16,11 +16,13 @@
 -- Database Creation and Use:
 --
 -- Drop Database
+DROP DATABASE if EXISTS guttman_classdb_assign1;
 
 -- Create database
+CREATE DATABASE  if not EXISTS guttman_classdb_assign1;
 
 -- Use database
-
+USE guttman_classdb_assign1
 
 -- Begin populating database
 
