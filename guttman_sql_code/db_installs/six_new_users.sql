@@ -111,9 +111,9 @@ WITH
                 IDENTIFIED BY 'guttmanGrizzlies_2024'
                 WITH
                 -- Set RESOURCE LIMITS
-                  MAX_QUERIES_PER_HOUR 20
+                  MAX_QUERIES_PER_HOUR 100
                   MAX_UPDATES_PER_HOUR 10
-                  MAX_CONNECTIONS_PER_HOUR 5
+                  MAX_CONNECTIONS_PER_HOUR 10
                   MAX_USER_CONNECTIONS 2
                   -- SET PASSWORD OPTIONS
                     FAILED_LOGIN_ATTEMPTS 4
@@ -208,6 +208,8 @@ GRANT 'app_user' TO 'admin_006';
 
 GRANT 'admin_user' TO 'admin_005';
 
+GRANT ALL PRIVILEGES ON guttman_202db_assign4.* TO 'admin_005'@'%';
+GRANT ALL PRIVILEGES ON classicmodels.* TO 'admin_003'@'%';
 FLUSH PRIVILEGES;
 
 
